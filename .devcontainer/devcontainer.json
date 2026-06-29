@@ -1,23 +1,39 @@
 {
-  "name": "Polyglot Jupyter Stack",
+  "name": "Full Stack & Data Science Environment",
   "image": "://microsoft.com",
   "features": {
-    "ghcr.io/devcontainers/features/rust:1": {},
-    "ghcr.io/devcontainers/features/go:1": {},
-    "ghcr.io/devcontainers/features/postgres:1": {}
+    "ghcr.io/devcontainers/features/python:1": {
+      "version": "latest"
+    },
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "latest"
+    },
+    "ghcr.io/devcontainers/features/postgres:1": {
+      "version": "latest"
+    },
+    "ghcr.io/devcontainers/features/rust:1": {
+      "version": "latest"
+    },
+    "ghcr.io/devcontainers/features/go:1": {
+      "version": "latest"
+    },
+    "ghcr.io/devcontainers/features/r:1": {
+      "version": "latest"
+    },
+    "ghcr.io/devcontainers/features/julia:1": {
+      "version": "latest"
+    }
   },
-  "onCreateCommand": "sudo apt-get update && sudo apt-get install -y r-base && wget https://julialang.org && tar -xvzf julia-1.10.0-linux-x86_64.tar.gz && sudo ln -s $(pwd)/julia-1.10.0/bin/julia /usr/local/bin/julia",
   "customizations": {
     "vscode": {
       "extensions": [
-        "ms-toolsai.jupyter",
         "ms-python.python",
+        "ms-vscode.vscode-typescript-next",
+        "ckshitijb.vscode-postgres",
         "rust-lang.rust-analyzer",
         "golang.go",
         "REditorSupport.r",
-        "julialang.language-julia",
-        "mtxr.sqltools",
-        "mtxr.sqltools-driver-pg"
+        "julialang.language-julia"
       ]
     }
   }
